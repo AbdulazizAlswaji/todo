@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script defer src="js/init-firebase.js"></script>
+
+
+
+    <script src="js/main.js"></script>
+    <title> Todo list </title>
+
+</head>
+
+<body>
+    <nav class="shadow">
+        <span> My List </span>
+    </nav>
+
+    <main class="container">
+        <form id="task-form" class="mt-5 mr-auto ml-auto pb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Add your task" id="add-task-title-main">
+                <div class="input-group-append">
+                    <button id="add-task-main" class=" btn btn-info" data-toggle="modal" data-target="#add-task-form">
+                        Add
+                        task </button>
+                </div>
+            </div>
+        </form>
+
+        <div id="tasks">
+        </div>
+
+    </main>
+
+    <!-- The Modal -->
+    <div class="modal" id="add-task-form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"> Add a New Task </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label> Title:</label>
+                        <input type="text" class="form-control" placeholder="Enter Title" id="add-task-title">
+                    </div>
+                    <div class="form-group">
+                        <label> Measurement:</label>
+                        <input type="text" class="form-control" placeholder="Enter Measurement"
+                            id="add-task-measurement">
+                    </div>
+                    <div class="form-group">
+                        <label> Target Score:</label>
+                        <input type="text" class="form-control" placeholder="Enter Target Score"
+                            id="add-task-target_score">
+                    </div>
+                </div>
+
+                <div class="alert alert-danger d-none" id="add-errors-list">
+                    <ul id="add-errors">
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" id="add-task"> Add Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="edit-task-form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"> Edit Task </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label> Title:</label>
+                        <input type="text" class="form-control" id="edit-task-title">
+                    </div>
+                    <div class="form-group">
+                        <label> Measurement:</label>
+                        <input type="text" class="form-control" id="edit-task-measurement">
+                    </div>
+                    <div class="form-group">
+                        <label> Target Score:</label>
+                        <input type="text" class="form-control" id="edit-task-target_score">
+                    </div>
+                    <div class="form-group">
+                        <label> <strong> Score: </strong> </label>
+                        <input type="text" class="form-control" id="edit-task-score">
+                    </div>
+                </div>
+
+                <div class="alert alert-danger d-none" id="edit-errors-list">
+                    <ul id="edit-errors">
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" id="update-task"> Update Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

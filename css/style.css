@@ -1,0 +1,46 @@
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+
+body {
+    background-color: #f6f7f9;
+    
+}
+
+nav {
+    background-color: #346cb0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+}
+ .task {
+     background-color: #fff;
+     margin: 5px;
+     padding: 6px;
+
+ }
+
+ .task-control {
+     float: right;
+ }
+
+ .feather {
+     height: 21px;
+     width: 24px;
+     margin-top: 13px;
+ }
+
+ .feather-button {
+    height: 36px;
+    width: 37px;
+ }
